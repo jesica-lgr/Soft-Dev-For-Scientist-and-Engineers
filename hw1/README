@@ -1,0 +1,70 @@
+CME 211 - Fall 2022
+
+Homework 1
+
+Implementation of an alignment program.
+
+Q&A
+
+PART 2
+* I should not expect an exact distribution because the size of the reference and the size and number of reads also affect the distribution.
+* I spent around 3 hours witing this part of the code plus other 3 hours debugging. 
+
+PART 3
+* No, the distribution of the reads do not match exactly to the distributions from when I generated them.
+* For the data sets, input sizes were determined by the reference length and the numer of reads (proporcionally).
+If the reference length increases, the time will increase in a logaritmic way. Therefore, if we consider 30x the reference length/reads, a human could no be able to analyze all the data. 
+* I spent around 2 hours in this part coding and other 2hrs debugging.
+
+
+COMMAND LINE LOGS:
+
+$ python3 generatedata.py 1000 600 50 "ref_1.txt" "reads_1.txt"
+ reference length:  1000
+ number reads:  600
+ read length:  50
+ aligns 0:  0.135
+ aligns_1:  0.7716666666666666
+ aligns_2:  0.09333333333333334
+
+$ python3 generatedata.py 10000 6000 50 "ref_2.txt" "reads_2.txt"
+ reference length: 10000
+ number reads: 6000
+ read length: 50
+ aligns 0: 0.15466666
+ aligns_1: 0.74533333
+ aligns_2: 0.1
+
+$ python3 generatedata.py 100000 60000 50 "ref_3.txt" "reads_3.txt"
+ reference length: 100000
+ number reads: 60000
+ read length: 50
+ aligns 0: 0.1486
+ aligns_1: 0.75225
+ aligns_2: 0.09915
+ 
+
+$ python3 processdata.py ref_1.txt reads_1.txt align_1.txt
+ reference length: 1000
+ number reads: 600
+ aligns 0: 0.1416666666
+ aligns 1: 0.7483333333
+ aligns 2: 0.11
+ elapsed time: 0.0065911558
+
+$ python3 processdata.py ref_2.txt reads_2.txt align_2.txt
+ reference length: 10000
+ number reads: 6000
+ aligns 0: 0.143833333
+ aligns 1: 0.757833333
+ aligns 2: 0.098333333
+ elapsed time: 0.269150
+
+
+$ python3 processdata.py ref_3.txt reads_3.txt align_3.txt
+ reference length: 100000
+ number reads: 60000
+ aligns 0: 0.14928333333
+ aligns 1: 0.74896666666
+ aligns 2: 0.10175
+ elapsed time: 24.13479709

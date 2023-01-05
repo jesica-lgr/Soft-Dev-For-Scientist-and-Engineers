@@ -1,0 +1,5 @@
+GAT 2 7
+TGG 0
+CTG 5
+TCT 4
+AAT -1

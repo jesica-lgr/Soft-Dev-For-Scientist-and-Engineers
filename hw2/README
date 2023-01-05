@@ -1,0 +1,49 @@
+CME 211 - Homework 2 - Fall 2022
+
+Implementation of a recommendation system.
+
+similarity.py is decomposed in 4 main functions:
+*clean_dataset(list) - creates a list of lists containing each word in each line from the input file.
+*movies(clean_list) - return a set with unique movies.
+*create_dic(clean_list) - create a dictionary that has movies as keys and list of tuples (user_id, rating) as elements.
+*similarities(ratings_catalog, users_set_per_movie, user_thresh) - return a dictionary with movies as keys and a list of tuples (most_similar_movie_id, rating, number of common users) as elements.
+
+
+
+QUESTIONS FROM PART 1:
+
+* Considerations: 
+Dataset must cover cases where the similarity coefficient was negative, positive and zero. 
+Movies rated by different users but stil with some users in common with other movies.
+Dataset with at least one case where the denominator is zero (users gave same rating as the mean rating for one movie).
+* Were there certain characteristics of the real data and file format that you made sure to capture in your test data?
+Yes, each line is a different user. 
+Each data is separated by a single space. 
+User ID could have different length. 
+Users and movies were not ordered..
+* Yes, I created a reference solution for test data looking at which users have rated each movie. Then, I look at the similar users between a determined pair of movies.
+I extracted their ratings and then I applied the equation for the similarity coefficient. 
+ 
+
+
+Command line log:
+
+$ python3 similarity.py ml-100k/u.data similarities.txt
+Input MovieLens file: ml-100k/u.data
+Output file for similarity data: similarities.txt
+Minimum number of common users = 5
+Read 100000 lines with total of 1682 movies and 943 users
+Computed similarities in 53.936440229415894 seconds
+
+$ head -n 10 similarities.txt
+1463
+1064
+1163 (311, 0.95, 6)
+50 (1269, 0.91, 9)
+823 (832, 0.9, 6)
+26 (1141, 0.97, 5)
+402 (918, 0.96, 5)
+527 (1172, 0.93, 6)
+1054 (509, 0.94, 5)
+254 (1273, 0.95, 5)
+
