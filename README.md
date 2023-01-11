@@ -4,13 +4,13 @@ This repository contains the assignments completed for the Software Development 
 **Email:** jesgonz@stanford.edu
 
 #### Homework 0
-  - *Intro to Github: Student data*
+  - *Intro to Github: Student information.*
 
 #### Homework 1
   - *Gene Sequence Alignment. Python.*
 
 #### Homework 2
-  - *Movie preferences predictor - Movies similarities. Python.*
+  - *Movie preferences predictor - Movie similarities. Python.*
 
 #### Homework 3
   - *Wing/airfoil pressure distribution - lift coefficient and stagnation point computation. Python.*
