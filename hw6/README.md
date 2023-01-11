@@ -46,7 +46,7 @@ BoxBlur(23): 11
 BoxBlur(27): 9
 ```
 
-**Note:** The last three outputs give different results as the ones stated in the hw 6 file. (BoxBlur(19): 19, BoxBlur(23): 17, and BoxBlur(27): 19). I tried multiple things, together with Rishu, Thomas, and Axel in several OH but unfortunately, we couldn't fix this issue. Therefore, they asked me to add this note for it to be considered while grading. 
+
 
 
 
